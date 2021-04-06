@@ -157,8 +157,6 @@ Error message and password prompt
 
 <li>$:/plugins/jcose/MegaMenu</li>
 
-<li>$:/plugins/jcose/MegaMenu/CurrentTheme</li>
-
 <li>$:/plugins/jcose/MegaMenu/DefaultState</li>
 
 <li>$:/SiteSubtitle</li>
@@ -10098,7 +10096,7 @@ Welcome</pre>
 <div created="20210406021809953" modified="20210406021905500" title="$:/palette">
 <pre>$:/palettes/Blanca</pre>
 </div>
-<div author="Joseph Cosentino" core-version="&gt;=5.1.23" created="20210317005833284" description="MegaMenu: A scalable menu for navigating your wiki" list="Readme" modified="20210324014402414" name="MegaMenu" plugin-type="plugin" title="$:/plugins/jcose/MegaMenu" type="application/json" version="1.0.6">
+<div author="Joseph Cosentino" core-version="&gt;=5.1.23" created="20210317005833284" description="MegaMenu: A scalable menu for navigating your wiki" list="Readme" modified="20210324014402414" name="MegaMenu" plugin-type="plugin" title="$:/plugins/jcose/MegaMenu" type="application/json" version="1.0.7">
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;$:/plugins/jcose/MegaMenu/Macros/Buttons&quot;: {
@@ -10119,7 +10117,7 @@ Welcome</pre>
             &quot;text&quot;: &quot;$:/plugins/jcose/MegaMenu/themes/light&quot;,
             &quot;title&quot;: &quot;$:/plugins/jcose/MegaMenu/CurrentTheme&quot;,
             &quot;tags&quot;: &quot;MegaMenu&quot;,
-            &quot;modified&quot;: &quot;20210323210948378&quot;,
+            &quot;modified&quot;: &quot;20210406021901135&quot;,
             &quot;created&quot;: &quot;20210316125343306&quot;
         },
         &quot;$:/plugins/jcose/MegaMenu/Example&quot;: {
@@ -10152,10 +10150,10 @@ Welcome</pre>
         },
         &quot;$:/plugins/jcose/MegaMenu/Readme&quot;: {
             &quot;created&quot;: &quot;20210317010527963&quot;,
-            &quot;text&quot;: &quot;!! Description\nThis plugin provides the `megamenu` macro. Which generates a useful menu for navigating through your wiki using relationships between your tiddlers - as defined by the tags you've probably already setup. \n\n!! Installation\nFirst ensure your wiki version is &gt;=5.1.23. This plugin does not work fully on earlier versions of TiddlyWiki. \n\nDrag [[$:/plugins/jcose/MegaMenu]] into your wiki. \n\n!! Syntax\n```\n&lt;&lt;megamenu maintag:\&quot;MyTag\&quot; statetid:\&quot;MyStateTiddler\&quot;&gt;&gt;\n```\n\n!! Usage\n!!! Macro Inputs\n# ''maintag'': The root tag that the menu starts from. You'll want this to be the highest level tag that your wiki starts at. \n#* (Optional) Defaults to: \&quot;~TableOfContents\&quot;\n# ''statetid'': The title of a state tiddler for holding information about the current menu.\n#* (Optional) Defaults to: \&quot;~$:/plugins/jcose/MegaMenu/DefaultState\&quot;\n#* This is only needed if you plan to have multiple of these menus in your wiki.\n\n!!! Navigating the Menu\n* This menu will at any time show three levels of links to the user, with the possibility to dive deeper by changing the root tag (more on this later).\n* This root tag is defined in the top left: right under the MENU title. Whatever is shown here is the root to all the other information shown on the menu. It defaults to the tag specified by the `maintag` input to the macro. \n* Under that, still on the left side, you will find a list of tiddlers that are tagged with the root. \n* Any of these can be clicked to further populate the right side of the menu with links to tiddlers tagged with that tag, or you can click the link button to open that tiddler directly. \n* The right side of the menu is populated with links to tiddlers similarly to the left side, except now all the links are grouped into different boxes. \n** You will find groups for tiddlers that are tagged with the selected option on the left AND another tag for context. \n** You will also find a group for tiddlers that are tagged with only the selected option. \n* You can change the root link to dive deeper into your wiki by clicking the double-up arrow button (called chevron-up in the core nomenclature). As described in the Controls section below. \n** On the top bar of the menu, you can trace the path you took to get to the currently displayed root tag. You can click any link along that path to reset the root to that value. \n\n\n!!! Controls\n\n{{$:/core/images/chevron-up}} - Change the root tag to the tag next to this button. \n\n{{$:/core/images/close-button}} - Reset the root tag to it's original value specified in the macro call. \n\n{{$:/core/images/link}} - Navigate to the tiddler with the same name as the tag next to this button. \n\n{{$:/core/images/new-here-button}} - Create a new tiddler tagged with this.\n\n\n!! Static Example (Controls do not function here)\n{{$:/plugins/jcose/MegaMenu/Example}}\n\n!! Full Example\n&gt; A great test that showcases the power of this menu is to try it in the tiddlywiki documentation. \n# Open [ext[https://tiddlywiki.com/]]\n# Install this plugin as explained above. \n# Create a tiddler and add this macro to the text of the tiddler `&lt;&lt;megamenu&gt;&gt;`\n# Explore!\n\n!! Change Theme\n{{$:/plugins/jcose/MegaMenu/ThemeSelect}}\n\n!! Alternative\nFor a simpler alternative, you can use the `&lt;&lt;simplemenu maintag&gt;&gt;` macro, which removes the leftbar from the menu and only shows groups of tiddlers tagged with the `maintag` input. Unlike the main version, this menu is static and does not change.&quot;,
+            &quot;text&quot;: &quot;!! Description\nThis plugin provides the `megamenu` macro. Which generates a useful menu for navigating through your wiki using relationships between your tiddlers - as defined by the tags you've probably already setup. \n\n!! Installation\nFirst ensure your wiki version is &gt;=5.1.23. This plugin does not work fully on earlier versions of TiddlyWiki. \n\nDrag [[$:/plugins/jcose/MegaMenu]] into your wiki. \n\n!! Syntax\n```\n&lt;&lt;megamenu maintag:\&quot;MyTag\&quot; statetid:\&quot;MyStateTiddler\&quot;&gt;&gt;\n```\n\n!! Usage\n!!! Macro Inputs\n# ''maintag'': The root tag that the menu starts from. You'll want this to be the highest level tag that your wiki starts at. \n#* (Optional) Defaults to: \&quot;~TableOfContents\&quot;\n# ''statetid'': The title of a state tiddler for holding information about the current menu.\n#* (Optional) Defaults to: \&quot;~$:/plugins/jcose/MegaMenu/DefaultState\&quot;\n#* This is only needed if you plan to have multiple of these menus in your wiki.\n\n!!! Navigating the Menu\n* This menu will at any time show three levels of links to the user, with the possibility to dive deeper by changing the root tag (more on this later).\n* This root tag is defined in the top left: right under the MENU title. Whatever is shown here is the root to all the other information shown on the menu. It defaults to the tag specified by the `maintag` input to the macro. \n* Under that, still on the left side, you will find a list of tiddlers that are tagged directly with the root. \n* Any of these options on the left can be clicked to further populate the right side of the menu with links to tiddlers tagged with that tiddler/tag. Effectively showing the next level down of your tag hierarchy.  \n* The right side of the menu has the additional feature of grouping links to tiddlers that have more than one tag in common. \n** You will find groups for tiddlers that are tagged with the selected option on the left AND another tag for context. \n** You will also find a group for tiddlers that are tagged with only the selected option. \n* You can change the root link to dive deeper into your wiki by clicking the double-up arrow button (called chevron-up in the core nomenclature). As described in the Controls section below. \n** On the top portion of the menu, you can trace the path you took to get to the currently displayed root tag using the displayed breadcrumbs. You can click any link along that path to reset the root to that value. \n\n\n!!! Controls\n\n{{$:/core/images/chevron-up}} - Change the root tag to the tag next to this button. \n\n{{$:/core/images/close-button}} - Reset the root tag to it's original value specified in the macro call. \n\n{{$:/core/images/link}} - Navigate to the tiddler with the same name as the tag next to this button. \n\n{{$:/core/images/new-here-button}} - Create a new tiddler tagged with this.\n\n\n!! Static Example (Controls do not function here)\n{{$:/plugins/jcose/MegaMenu/Example}}\n\n!! Full Example\n&gt; A great test that showcases the power of this menu is to try it in the tiddlywiki documentation. \n# Open [ext[https://tiddlywiki.com/]]\n# Install this plugin as explained above. \n# Create a tiddler and add this macro to the text of the tiddler `&lt;&lt;megamenu&gt;&gt;`\n# Explore!\n\n!! Change Theme\n{{$:/plugins/jcose/MegaMenu/ThemeSelect}}\n\n!! Alternative\nFor a simpler alternative, you can use the `&lt;&lt;simplemenu maintag&gt;&gt;` macro, which removes the leftbar from the menu and only shows groups of tiddlers tagged with the `maintag` input. Unlike the main version, this menu is static and does not change.&quot;,
             &quot;title&quot;: &quot;$:/plugins/jcose/MegaMenu/Readme&quot;,
             &quot;tags&quot;: &quot;MegaMenu&quot;,
-            &quot;modified&quot;: &quot;20210406002942379&quot;
+            &quot;modified&quot;: &quot;20210406231145938&quot;
         },
         &quot;$:/plugins/jcose/MegaMenu/styles&quot;: {
             &quot;created&quot;: &quot;20210316123944661&quot;,
@@ -10190,9 +10188,6 @@ Welcome</pre>
     }
 }</pre>
 </div>
-<div created="20210316125343306" modified="20210406021901135" tags="MegaMenu" title="$:/plugins/jcose/MegaMenu/CurrentTheme">
-<pre>$:/plugins/jcose/MegaMenu/themes/light</pre>
-</div>
 <div created="20210406021634474" modified="20210406021943524" sidebar="Tiddler A" title="$:/plugins/jcose/MegaMenu/DefaultState" tm-breadcrumbs="[[Primary Tag]]">
 <pre>Primary Tag</pre>
 </div>
@@ -10208,13 +10203,13 @@ Welcome</pre>
 <div created="20210406021258441" modified="20210406021258441" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Plugins</pre>
 </div>
-<div created="20210406021256496" modified="20210406021913340" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Open</pre>
+<div created="20210406021256496" modified="20210406230238902" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/More</pre>
 </div>
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20210406022023464" list="$:/ControlPanel Showcase Welcome" modified="20210406022023464" title="$:/StoryList">
+<div created="20210406230241056" list="$:/plugins/jcose/MegaMenu Welcome" modified="20210406230320235" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
